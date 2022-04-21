@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    transition: all 1s ease;
+
+    &::after, &::before {
+        box-sizing: border-box;
+    }
+
+    &:focus {
+      outline: none;
+    }
+}
+
+#searchItem, #gif-card {
+    transition: all .3s ease-out;
+
+    &:hover {
+        transform: scale(1.05);
+        --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+}
+
+#gif-card {
+  & img {
+    animation: fade-in .6s;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

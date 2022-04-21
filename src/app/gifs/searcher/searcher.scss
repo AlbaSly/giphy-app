@@ -1,0 +1,14 @@
+.txtSearch {
+  z-index: 20;
+  position: sticky;
+  top: 10px;
+
+  opacity: .5;
+
+  transform: scale(0.8);
+
+  &:focus {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,22 @@
+<div [hidden]="!isLoading">
+  <app-spinner></app-spinner>
+</div>
+
+<img
+  (click)="setShowModal=true;"
+  [hidden]="isLoading"
+  (load)="isLoading=false;"
+  src={{gif.images.downsized_medium.url}}
+  alt="gif.title"
+  class="mx-auto hover:cursor-pointer"
+>
+
+<div class="p-2">
+  <p>By
+    <a href={{gif.images.original.url}}>
+    <strong class="text-purple-400 hover:text-purple-800">{{gif.title.split(' ')[gif.title.split(' ').indexOf('by')+1] || 'Unknow'}}</strong>
+    </a>
+  </p>
+</div>
+
+

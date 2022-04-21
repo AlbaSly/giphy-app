@@ -1,0 +1,12 @@
+<div id="page" class="w-full bg-gray-700">
+    <app-searcher class="p-10 relative"></app-searcher>
+
+    <app-gifs-list
+      class="grid grid-cols-2 items-baseline justify-around md:grid-cols-4 gap-2 min-h-screen w-11/12 mx-auto"
+    ></app-gifs-list>
+</div>
+
+<ng-container *ngIf="showModal">
+  <app-modal></app-modal>
+</ng-container>
+

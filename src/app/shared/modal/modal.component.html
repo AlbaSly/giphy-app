@@ -1,0 +1,26 @@
+<div id="modal">
+  <div id="modal-content" class="content p-2 bg-gray-900">
+    <div [hidden]="!isLoading" class="">
+      <app-spinner></app-spinner>
+    </div>
+
+    <div id="gif-view" class="top-0 bottom-0 right-0 left-0">
+      <img
+        id="gif-in-modal"
+        [hidden]="isLoading"
+        (load)="isLoading=false;"
+        [src]="gifSelected!.images.original.url"
+        [alt]="gifSelected!.title"
+        class="mx-auto w-3/4"
+      >
+    </div>
+
+    <button
+      (click)="setShowModal=false;"
+      type="button"
+      class="close"
+    >
+      X
+    </button>
+  </div>
+</div>
