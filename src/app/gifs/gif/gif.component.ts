@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { SharedService } from "src/app/shared/services/shared.service";
+import { Gif } from "../interfaces/gifs.interface";
 
 @Component({
   selector: 'app-gif',
@@ -7,7 +8,7 @@ import { SharedService } from "src/app/shared/services/shared.service";
 })
 export class GifComponent {
   @Input('gifData')
-  public gif: any = {}
+  public gif: Gif | undefined;
 
   public isLoading = true;
 
